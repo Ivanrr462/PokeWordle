@@ -1,0 +1,75 @@
+/* Reset básico y fondo */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #121212;
+  color: #fff;
+  font-family: 'Pokemon Solid', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor centrado con flex */
+.container {
+  text-align: center;
+}
+
+/* Título con efecto logo Pokémon (amarillo y azul) */
+.titulo {
+  font-size: 24px;
+  background: linear-gradient(90deg, #FFDE00 50%, #3B4CCA 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Mensaje de estado */
+.mensaje {
+  font-size: 18px;
+  height: 24px; /* reserva espacio aunque no haya texto */
+  margin-bottom: 10px;
+}
+
+/* Grid de juego: 6 filas (intentos), nº de columnas dinámico */
+.grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Cada celda */
+.cell {
+  width: 60px;
+  height: 60px;
+  background: #333;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Colores según estado */
+.cell.absent { background: #555; }
+.cell.present { background: #FFC107; }
+.cell.correct { background: #4CAF50; }
+
+/* Botón Reiniciar */
+.btn-reiniciar {
+  margin-top: 20px;
+  padding: 20px;
+  background: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-reiniciar:hover {
+  background: #1976D2;
+}
